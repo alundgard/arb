@@ -5,8 +5,10 @@ class homeController {
     constructor() {};
 
     public get(req: Request, res: Response) {
+        let id = req.query.id;
+        if (id === undefined) id = 'undefined';
         res.render('home', {
-            title: 'Home Page Title'
+            id: id
         });
     }
 

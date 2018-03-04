@@ -1,0 +1,57 @@
+var mboxCurrent = mboxFactories.get('default').get('Q4-2015-JS-NED-ACQ-v24',0);mboxCurrent.setOffer(new mboxOfferAjax('\n\n<!-- AAM API call here -->\n'));mboxCurrent.getOffer().setOnLoad(function() {
+Adat.show({
+
+mediaSource : "https://918ec7bd8a979be8d8f3-6e95fed53fb5a58b4332bc479f2dd214.ssl.cf5.rackcdn.com/HTML5_SECURE/DIGI_GM_BDL_PLACQ_ENG_89PRC6ST157XCH039x12_TRYX1_NOOFF_HTML/728x90/DIGI_GM_BDL_PLACQ_ENG_89PRC6ST157XCH039x12_TRYX1_NOOFF_HTML_728x90.html",
+
+landingPage : "http://www.xfinity.com/Corporate/Learn/Bundles/bundles.html?dfaid=4053494&cmp=0&cid=4053494",
+
+d_creative_dat : "BTP8907",
+
+d_experience_id : "BB1_BTP8907"
+
+});
+
+
+if(Adat && Adat.mboxTrack) {
+var mboxArgs = ["Q3-2014-JS-NED-ACQ_monitor","creative_name=" + Adat.settings.data.d_creative_dat, "mbox_name=" + Adat.settings.data.mboxName];var aamArr = Adat.settings.data.aam_cv.split(';');
+for (var i = 0; i<aamArr.length; i++) {
+var parts = aamArr[i].split('=');
+mboxArgs.push( parts[0]+'='+ encodeURIComponent(parts[1]) );
+}
+var div = document.createElement("div");
+div.id = "mboxDiv"+Math.floor(Math.random()*10000);
+var body = document.getElementsByTagName("body")[0];
+if (body) body.insertBefore(div,body.firstChild);
+mboxDefine(div.id,"Q3-2014-JS-NED-ACQ_monitor");
+mboxUpdate.apply(undefined,mboxArgs);
+}
+ 
+if (typeof(s_tnt) == 'undefined') { 
+    s_tnt = ''; 
+} 
+s_tnt += '65362:303:0,'; 
+
+
+function smartMboxDefine(_mbox){
+    if(typeof(mbox) != "undefined" && !document.getElementById(_mbox + '_div')){
+            var d = document.createElement('div');
+            d.id = _mbox + '_div';
+            document.body.insertBefore(d,document.body.firstChild);
+            mboxDefine(_mbox + '_div', _mbox).setFetcher(new mboxAjaxFetcher());
+    }
+}
+
+function aam_tnt_cb (){
+if(typeof(arguments[0].stuff) != "undefined" && arguments[0].stuff != ""){
+  for(var i = 0; i < arguments[0].stuff.length; i++){
+    if(arguments[0].stuff[i].cn =="aam_tnt"){
+      if(arguments[0].stuff[0].cv.split(",")){
+        var demdex_raw = arguments[0].stuff[i].cv.split(",");
+        //alert(demdex_raw);
+        smartMboxDefine('open_aam_mbox'); 
+        mboxUpdate('open_aam_mbox', 'profile.aam_segment='+demdex_raw);
+}}}}}
+
+
+if (window.tntRenderFlash && "Q4-2015-JS-NED-ACQ-v24" != "target-global-mbox") tntRenderFlash();
+});mboxCurrent.loaded();

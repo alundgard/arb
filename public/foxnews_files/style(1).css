@@ -1,0 +1,222 @@
+/* ---- 300x250 ----*/
+
+/*--- FRAME 1 ---*/
+
+#line_1_1 {
+	position: absolute;
+	background-position: 0 -144px;
+	width: 181px;
+	height: 28px;
+	left: 0px;
+	top: 12px;
+}
+#line_1_2 {
+	position: absolute;
+	background-position: 0 -177px;
+	width: 199px;
+	height: 28px;
+	left: 0px;
+	top: 45px;
+}
+
+/*#line_1_3 {
+	position: absolute;
+	background-position: 
+	left: px;
+	top: px;
+}*/
+
+/*--- FRAME 2 ---*/
+
+#line_2_1 {
+	position: absolute;
+	background-position: 0 -220px;
+	width: 271px;
+	height: 28px;
+	left: 0px;
+	top: 12px;
+}
+#line_2_2 {
+	position: absolute;
+	background-position: 0 -252px;
+	width: 294px;
+	height: 29px;
+	left: 0px;
+	top: 45px;
+}
+
+#line_2_3 {
+	position: absolute;
+	background-position: 0 -284px;
+	width: 123px;
+	height: 28px;
+	left: 0px;
+	top: 78px;
+}
+
+/*--- FRAME 3 ---*/
+
+#line_3_1 {
+	position: absolute;
+	background-position: 0 -330px;
+	width: 288px;
+	height: 29px;
+	left: 0px;
+	top: 12px;
+}
+#line_3_2 {
+	position: absolute;
+	background-position: 0 -363px;
+	width: 247px;
+	height: 28px;
+	left: 0px;
+	top: 45px;
+}
+#line_3_3 {
+	position: absolute;
+	background-position: 0 -396px;
+	width: 153px;
+	height: 28px;
+	left: 0px;
+	top: 78px;
+}
+/*#line_3_4 {
+	position: absolute;
+	background-position: 0 -479px;
+	width: 214px;
+	height: 31px;
+	left: 0px;
+	top: 132px;
+}*/
+
+#video {
+	position: absolute;
+	overflow: hidden;
+	z-index: 1;
+	width: 300px;
+	height: 188px;
+	left: 0px;
+	top: 0px;
+}
+
+/*--------- END EDITABLES ---------*/
+
+/*elements appear from left side - make left border*/
+.textOnPanel {
+	border-left: 50px solid #000;
+	left: -50px !important;
+}
+
+.bg {
+	position: absolute;
+	width: 300px;
+	height: 250px;
+}
+
+.sprite {
+	display: inline-block;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-image: url(images/300x250_sprites_crushed.png);
+}
+
+.logo {
+	position: absolute;
+	background-position: -1px -1px;
+	width: 120px;
+	height: 64px;
+
+	/*bottom padding for elastic ease*/
+	border-bottom: 50px solid black;
+}
+
+.cta {
+	position: absolute;
+	background-position: -132px -1px;
+	width: 180px;
+	height: 64px;
+}
+
+.cta_over {
+	position: absolute;
+	background-position: -132px -71px;
+	width: 180px;
+	height: 64px;
+}
+
+#loading			,
+#text_shell			,
+#cta				,
+#cta_default		,
+#cta_default_shell	,
+#cta_over			,
+#logo
+{
+	position:absolute;
+}
+
+#loading{
+	z-index: 1000;
+}
+
+#text_shell	{
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+#loading			,
+#text_shell			,
+#cta				,
+#cta_default		,
+#cta_default_shell	,
+#cta_over			,
+#logo
+{
+	position:absolute;
+}
+
+#loading{
+	z-index: 1000;
+}
+
+#text_shell	{
+	width: 100%;
+	height: 100%;
+	z-index:10;
+}
+
+#logo {
+	top: 187px;
+}
+
+/* -------------------------------------------------------- cta */
+#cta {
+	width: 380px;
+	height: 90px;
+	left: 120px;
+	top: 187px;
+	overflow:hidden;
+
+	border-bottom: 50px solid #14ABE0;
+}
+#cta_default,
+#cta_over,
+#cta_default_shell {
+	width: 100%;
+	height: 100%;
+}
+#cta_default_shell{
+	height: 63px;
+	z-index: 20;
+	overflow: hidden;
+	border-bottom: 50px solid #14ABE0;
+}
+#cta_default {
+	height: 63px;
+
+}
+#cta-over {
+	height: 63px;
+	z-index: 10;
+}

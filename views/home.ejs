@@ -3,12 +3,17 @@
 
 <head>
     <title>
-        <%= title %>
+        Arboretum Home
     </title>
 </head>
 
 <body>
-    <h1>HOME PAGE</h1>
+    <h1>Arboretum</h1>
+    <p>Your current ID is <%= id %></p>
+
+    <form action="/instr" method="get">
+        <input type="submit" value="Instructions Page">
+    </form>
 </body>
 
 </html>

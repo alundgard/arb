@@ -1,0 +1,172 @@
+body {
+	margin: 0px;
+}
+
+#container {
+	top: 0px;
+	left: 0px;
+	width: 728px;
+	height: 90px;
+	display: block;
+	position: relative;
+	cursor: pointer;
+	border: 1px solid #000000;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	overflow: hidden;
+    background-color: #ebebeb;
+    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d2d3d5+1,ffffff+40,ffffff+63,d2d3d5+100 */
+background: rgb(210,211,213); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxJSIgc3RvcC1jb2xvcj0iI2QyZDNkNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYzJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkMmQzZDUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(210,211,213,1) 1%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 63%, rgba(210,211,213,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(210,211,213,1)), color-stop(40%,rgba(255,255,255,1)), color-stop(63%,rgba(255,255,255,1)), color-stop(100%,rgba(210,211,213,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(210,211,213,1) 1%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 63%,rgba(210,211,213,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(210,211,213,1) 1%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 63%,rgba(210,211,213,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(210,211,213,1) 1%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 63%,rgba(210,211,213,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(210,211,213,1) 1%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 63%,rgba(210,211,213,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2d3d5', endColorstr='#d2d3d5',GradientType=0 ); /* IE6-8 */
+
+      
+}
+
+#banner {
+	top: 0px;
+	left: 0px;
+	width: 728px;
+	height: 90px;
+	display: block;
+	overflow: hidden;
+
+}
+
+
+#txt1{
+    position: absolute;
+    background: url('img_sprite.png') no-repeat -7px -7px;
+	width: 282px;
+	height: 19px;
+ 
+   
+}
+#txt2{
+    position: absolute;
+    background: url('img_sprite.png') no-repeat -7px -31px;
+    width: 343px;
+    height: 24px;
+	z-index: 10;
+}
+.letterOrder{
+    opacity: 0;
+    
+}
+
+.one{
+    position: absolute;
+    background: url('img_sprite.png') no-repeat -204px -52px;
+    width: 26px;
+    height: 35px;
+    top: 10px;
+    left: 165px;
+	z-index: 10;   
+}
+.two{
+    position: absolute;
+    background: url('img_sprite.png') no-repeat -229px -52px;
+    width: 13px;
+    height: 35px;
+    top: 10px;
+    left: 185px;
+	z-index: 10;   
+}
+
+.three{
+    position: absolute;
+    background: url('img_sprite.png') no-repeat -243px -52px;
+    width: 23px;
+    height: 35px;
+    top: 10px;
+    left: 194px;
+	z-index: 10;   
+}
+.four{
+    position: absolute;
+    background: url('img_sprite.png') no-repeat -264px -52px;
+    width: 31px;
+    height: 35px;
+    top: 10px;
+    left: 212px;
+	z-index: 10;   
+}
+.five{
+    position: absolute;
+    background: url('img_sprite.png') no-repeat -296px -53px;
+    width: 28px;
+    height: 33px;
+    top: 10px;
+    left: 232px;
+	z-index: 10;   
+}
+
+.six{
+    position: absolute;
+    background: url('img_sprite.png') no-repeat -323px -53px;
+    width: 28px;
+    height: 33px;
+    top: 10px;
+    left: 254px;
+	z-index: 10;   
+}
+
+.seven{
+    position: absolute;
+    background: url('img_sprite.png') no-repeat -348px -53px;
+    width: 30px;
+    height: 33px;
+    top: 10px;
+    left: 274px;
+	z-index: 10;   
+}
+
+
+#infinity_logo{
+	position: absolute;
+	background: url('img_sprite.png') no-repeat -7px -57px;
+	width: 56px;
+	height: 18px;
+    right: 14px;
+    top: 13px;
+}
+
+#cta{
+    position: absolute;
+    overflow: hidden;
+    height: 26px;
+    width: 128px;
+    background-color: #2ea0dd;
+    right: 14px;
+    top: 48px;
+   
+}
+
+
+#ctaText{
+    position: absolute;
+    margin: 0 auto;
+    background: url('img_sprite.png') no-repeat -72px -62px;
+	width: 117px;
+	height: 11px;
+    top: 8px;
+    left: 7px;
+    z-index: 10;
+}
+#shine{
+    position: absolute;
+    background: url('img_sprite.png') no-repeat -358px -3px;
+	width: 35px;
+	height: 26px;
+    top:0;
+    left: -94px;
+}
