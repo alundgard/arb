@@ -1,0 +1,30 @@
+{
+  "name": "arb-access",
+  "version": "1.0.0",
+  "description": "Arboretum Access Exp UI",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node ./src/index.ts",
+    "start": "node ./dist/index.ts",
+    "prod": "npm run build && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alundgard/arb-access.git"
+  },
+  "author": "arlu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alundgard/arb-access/issues"
+  },
+  "homepage": "https://github.com/alundgard/arb-access#readme",
+  "dependencies": {
+    "@types/node": "^9.4.6",
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "path": "^0.12.7",
+    "typescript": "^2.7.2"
+  }
+}

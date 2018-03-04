@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Arboretum</title>
+	<script>
+	startTasks = () => {
+		if(confirm("Are you sure you're ready to start the tasks?")) {
+			alert("Starting it up!");
+		} else {
+			alert("Okay, we're sending you back.");
+		}
+	}
+	</script>
+</head>
+
+<body>
+	<h1>Instructions</h1>
+
+	<h2>Overview</h2>
+
+	<p>This task consists of the following...
+		<ul>
+			<li>Download and install the Arboretum application at the following link: <a href="">Download</a>.</li>
+			<li>Open the download file and install the application.</li>
+			<li>After installing the application, open it up.</li>	
+		</ul>
+	</p>
+
+	<h2>When you have downloaded and installed Arboretum, click the following button to begin the tasks.</h2>
+
+	<button onclick="startTasks()">Start Tasks</button>
+
+</body>
+
+</html>
