@@ -22,9 +22,10 @@ class App {
 	private config(): void {
 		this.app.use(bodyParser.json());
 		this.app.use(bodyParser.urlencoded({ extended: false }));
+		this.app.use(express.static(path.join(__dirname, '../public')));
 		this.app.set('views', path.join(__dirname, '../views'));
 		this.app.set('view engine', 'ejs');
-	}
+	}	
 
 	// Setup Routes
 	private routes(): void {
@@ -38,6 +39,7 @@ class App {
 		// Instr
 		router.get('/instr', instrController.get);
 		this.app.use('/instr', router);
+
 	}
 }
 
