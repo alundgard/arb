@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 // Controllers
 const home_1 = require("./controllers/home");
+const instr_1 = require("./controllers/instr");
 //
 class App {
     constructor() {
@@ -22,9 +23,13 @@ class App {
     // Setup Routes
     routes() {
         const router = express.Router();
+        // Home
         router.get('/', home_1.default.get);
         router.post('/', home_1.default.post);
         this.app.use('/', router);
+        // Instr
+        router.get('/instr', instr_1.default.get);
+        this.app.use('/instr', router);
     }
 }
 exports.default = new App().app;

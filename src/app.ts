@@ -5,6 +5,7 @@ import { Request, Response } from 'express';
 
 // Controllers
 import homeController from './controllers/home';
+import instrController from './controllers/instr';
 
 //
 class App {
@@ -29,9 +30,14 @@ class App {
 	private routes(): void {
 		const router = express.Router();
 
+		// Home
 		router.get('/', homeController.get);
 		router.post('/', homeController.post);
 		this.app.use('/', router);
+
+		// Instr
+		router.get('/instr', instrController.get);
+		this.app.use('/instr', router);
 	}
 }
 
