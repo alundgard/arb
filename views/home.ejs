@@ -8,12 +8,22 @@
 </head>
 
 <body>
-    <h1>Arboretum</h1>
-    <p>Your current ID is <%= id %></p>
+    <h1>Arb Tasks</h1>
+    <% if (id) { %>
+        <p>Your current username is <%= id %>.</p>
+        <p>If this is corrent, click the Go to Instructions button.</p>
+        <form action="/instr" method="get">
+            <input type="submit" value="Go to Instructions Page" />
+        </form>
+    
+    <% } else { %>
+        <p>Please enter a username and click the Submit button.</p>
+        <form action="/" method="post">
+            <input type="text" name="id" value="Enter a username" />
+            <input type="submit" value="Submit" />
+        </form>
+    <% } %>
 
-    <form action="/instr" method="get">
-        <input type="submit" value="Instructions Page">
-    </form>
 </body>
 
 </html>

@@ -1,11 +1,15 @@
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as path from 'path';
+import * as mongoose from 'mongoose';
+
 import { Request, Response } from 'express';
 
 // Controllers
 import homeController from './controllers/home';
 import instrController from './controllers/instr';
+import processController from './controllers/process';
+import taskController from './controllers/task';
 
 //
 class App {
@@ -16,6 +20,7 @@ class App {
 		this.app = express();
 		this.config();
 		this.routes();
+		this.db();
 	}
 
 	// Setup Config
@@ -40,6 +45,22 @@ class App {
 		router.get('/instr', instrController.get);
 		this.app.use('/instr', router);
 
+		// Process
+		router.post('/process', processController.post);
+		this.app.use('/process', router);
+
+		// Task
+		router.get('/task', taskController.get);
+		this.app.use('/task', router);
+
+	}
+
+	// Setup DB
+	private db(): void {
+		let mongoDB = 'mongodb://127.0.0.1/arb_access';
+		mongoose.connect(mongoDB);
+		mongoose.Promise = global.Promise;
+		let db = mongoose.connection;
 	}
 }
 

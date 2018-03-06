@@ -1,12 +1,14 @@
 import { Request, Response } from 'express';
 
-class homeController {
+var process = require('../models/db.ts');
+
+class processController {
 
     constructor() {};
 
     public get(req: Request, res: Response) {
         let id = req.query.id;
-        if (id === undefined) id = false;
+        if (id === undefined) id = 'undefined';
         res.render('home', {
             id: id
         });
@@ -14,13 +16,15 @@ class homeController {
 
     public post(req: Request, res: Response) {
         const data = req.body;
+        console.log(data);
+
         // query a database and save data
-        // res.status(200).send(data);d
-        res.render('home', {
-            id: data.id
-        });
+        let DB_Proc = new process(data);
+        DB_Proc.save();
+
+        res.status(200).send(data);
     }
 
 }
 
-export default new homeController()
+export default new processController()
