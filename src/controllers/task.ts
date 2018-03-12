@@ -5,7 +5,10 @@ class taskController {
     constructor() {};
 
     public get(req: Request, res: Response) {
-        res.redirect('/arb/1A.html')
+
+        // Todo: Get correct task based on user progress
+
+        res.redirect('/arb/1A.html');
     }
 }
 

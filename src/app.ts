@@ -1,5 +1,6 @@
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
+import * as session from 'express-session';
 import * as path from 'path';
 import * as mongoose from 'mongoose';
 
@@ -28,6 +29,10 @@ class App {
 		this.app.use(bodyParser.json());
 		this.app.use(bodyParser.urlencoded({ extended: false }));
 		this.app.use(express.static(path.join(__dirname, '../public')));
+		this.app.use(session({
+			secret: 'this-is-a-secret-token',
+			cookie: { maxAge: 60000 }
+		})); // FIXME!
 		this.app.set('views', path.join(__dirname, '../views'));
 		this.app.set('view engine', 'ejs');
 	}	

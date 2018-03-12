@@ -15,7 +15,10 @@ class processController {
     }
 
     public post(req: Request, res: Response) {
-        const data = req.body;
+        
+        let data = req.body;
+        data.username = req.session.username;
+
         console.log(data);
 
         // query a database and save data

@@ -14,8 +14,13 @@ class homeController {
 
     public post(req: Request, res: Response) {
         const data = req.body;
-        // query a database and save data
-        // res.status(200).send(data);d
+
+        // check if username already in db
+        // if so, create different username
+
+        let sessData = req.session;
+        sessData.username = data.id;
+
         res.render('home', {
             id: data.id
         });
