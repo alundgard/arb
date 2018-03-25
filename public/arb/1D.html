@@ -4,26 +4,7 @@
 <title>Knowing What You Don't Know</title>
 <script>
     function openWindow() {
-        window.open("cal.html");
-
-    }
-
-    function processTest() {
-        console.log(document.myform);
-    }
-
-    function copyLink() {
-        /* Get the text field */
-        var copyText = document.getElementById("webpage-link");
-
-        /* Select the text field */
-        copyText.select();
-
-        /* Copy the text inside the text field */
-        document.execCommand("Copy");
-
-        /* Alert the copied text */
-        alert("Copied the text: " + copyText.value);
+        window.open("cal2.html");
     }
 </script>
 </head>
@@ -43,10 +24,6 @@
 </div>
 
 <button onclick="openWindow()">Open Webpage</button>
-<!--
-<p><a href="/webpage"></a></p>
-<button onclick="copyLink()">Copy Webpage Link</button>
--->
 
 <div>
     <h2>Submit answer here:</h2>
@@ -102,7 +79,7 @@
             <input type="hidden" name="timestamp" id="timestamp" value="">
             <input type="hidden" name="time1" id="time1" value="">
             <input type="hidden" name="time2" id="time2" value="">
-            <input type="hidden" name="qID" id="qID" value="1A How many calories are needed to lose 1 pound per week">
+            <input type="hidden" name="qID" id="qID" value="1D How many calories are needed to lose 1 pound per week">
             <label type="hidden" for="submit"></label>
             <input type="submit" name="submit" value="Submit Answers" onclick="endTime(); return checkAnswers(); ">
         </ol>
@@ -128,7 +105,7 @@
     function checkAnswers() {
         var x = document.myform.taskAnswer.value;
         if (x=="" || x==null) {
-            alert("Please provide an answer for question 1: How many calories are needed to lose 1 pound per week.");
+            alert("Please provide an answer for question 1: How many calories are needed to lose 1 pound per week:.");
             return false;
         }
         var x = document.myform.task1.value;

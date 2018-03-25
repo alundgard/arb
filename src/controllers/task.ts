@@ -1,5 +1,7 @@
 import { Request, Response } from 'express';
 
+let user = require('../models/task.ts');
+
 class taskController {
 
     constructor() {};

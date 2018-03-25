@@ -5,25 +5,6 @@
 <script>
     function openWindow() {
         window.open("cal.html");
-
-    }
-
-    function processTest() {
-        console.log(document.myform);
-    }
-
-    function copyLink() {
-        /* Get the text field */
-        var copyText = document.getElementById("webpage-link");
-
-        /* Select the text field */
-        copyText.select();
-
-        /* Copy the text inside the text field */
-        document.execCommand("Copy");
-
-        /* Alert the copied text */
-        alert("Copied the text: " + copyText.value);
     }
 </script>
 </head>
@@ -37,23 +18,19 @@
         <li>Don't close this window as you navigate other windows.</li>
         <li>Survey questions are below the button.</li>
     </ul>
-    <h2>The following button will open a webpage in a new window for a calorie calculator. The information for age, gender, height, weight, and activity are already entered and cannot be modified.
-    If the information exists on the webpage, find the number of calories per day needed to lose 1 pound per week. 
+    <h2>The following button will open a webpage in a new window for a calorie calculator.
+    If the information exists on the webpage, find how many kilojoules per ounce are in ethanol.
     Please provide your answer at the bottom of the current page.</h2>
 </div>
 
 <button onclick="openWindow()">Open Webpage</button>
-<!--
-<p><a href="/webpage"></a></p>
-<button onclick="copyLink()">Copy Webpage Link</button>
--->
 
 <div>
     <h2>Submit answer here:</h2>
     <form action="/process" method="post" name="myform">
     <ol>
         <li>
-        <label for="taskAnswer">How many calories are needed to lose 1 pound per week:</label>
+        <label for="taskAnswer">How many kilojoules per ounce are in ethanol:</label>
         <input name="taskAnswer" id="taskAnswer" type="text" style="border: solid 1px" oninput="endTime()"><br>
         </li>
         <li>
@@ -98,11 +75,10 @@
         <label for="task6">What tips, tricks, shortcuts, or other knowledge did you use when completing this task?</label><br>
             <textarea style="border: solid 1px" name="task6" id="task6" cols="50" rows="3" onchange="endTime()"></textarea><br>
         </li>
-
             <input type="hidden" name="timestamp" id="timestamp" value="">
             <input type="hidden" name="time1" id="time1" value="">
             <input type="hidden" name="time2" id="time2" value="">
-            <input type="hidden" name="qID" id="qID" value="1A How many calories are needed to lose 1 pound per week">
+            <input type="hidden" name="qID" id="qID" value="1B How many kilojoules per ounce are in ethanol">
             <label type="hidden" for="submit"></label>
             <input type="submit" name="submit" value="Submit Answers" onclick="endTime(); return checkAnswers(); ">
         </ol>
@@ -116,7 +92,7 @@
     document.myform.timestamp.value=d
     document.myform.time1.value=start;
 
-    //get end time on submit click
+        //get end time on submit click
     function endTime() {
         var d2 = new Date();
         var end=d2.getTime();
@@ -128,7 +104,7 @@
     function checkAnswers() {
         var x = document.myform.taskAnswer.value;
         if (x=="" || x==null) {
-            alert("Please provide an answer for question 1: How many calories are needed to lose 1 pound per week.");
+            alert("Please provide an answer for question 1: How many kilojoules per ounce are in ethanol.");
             return false;
         }
         var x = document.myform.task1.value;

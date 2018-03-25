@@ -3,25 +3,67 @@
 
 <head>
     <title>
-        Arboretum Home
+        Shared Web Browsing Study
     </title>
 </head>
 
 <body>
-    <h1>Arb Tasks</h1>
+    <h1>Shared Web Browsing Study</h1>
     <% if (id) { %>
-        <p>Your current username is <%= id %>.</p>
+        <p>You are logged in as <%= id %>.</p>
         <p>If this is corrent, click the Go to Instructions button.</p>
         <form action="/instr" method="get">
             <input type="submit" value="Go to Instructions Page" />
         </form>
     
     <% } else { %>
-        <p>Please enter a username and click the Submit button.</p>
-        <form action="/" method="post">
-            <input type="text" name="id" value="Enter a username" />
-            <input type="submit" value="Submit" />
-        </form>
+        <p> You are being asked to take part in a research study on how inaccessible website navigation may be improved by shared web browsing.
+            "Shared web browsing" means sharing the website content (and ONLY the website content) with a remote sighted user.
+            No personally identifying information (such as your email address) will be revealed to anyone other than the researchers conducting this study.
+        </p>
+        <p>
+            <h2>What this study is about: </h2>
+            The purpose of this study is to test if shared web browsing is beneficial to blind or low-vision users, in terms of speed and accuracy.
+        </p>
+        <p>
+            <h2>What we will ask you to do: </h2>
+            If you agree to be in this study, we will ask you to complete a sequence of tasks.
+            Each task will consist of finding a specific piece of content on a webpage as quickly as possible.
+            In order to find the requested content, you will navigate to the webpage via the shared browser.
+            At any time, you can choose to employ a remote sighted worker to collaborate in finding the content.
+            You will be able to communicate with this worker via a chat window, and accept/reject any of their proposed navigation actions.
+        </p>
+        <p>
+            <h2>Compensation: </h2>
+            We will compensate you at a rate of $35.00 per hour.
+        </p>
+        <p>
+            <h2>Your answers will be confidential: </h2>
+            The records of this study will be kept private.
+            In any sort of report we make public we will not include any information that will make it possible to identify you.
+            Research records will be kept on encrypted servers; only the researchers will have access to the records.
+        </p>
+        <p>
+            <h2>Taking part is voluntary: </h2>
+            Taking part in this study is completely voluntary.
+            You may skip any questions that you do not want to answer.
+            If you decide not to take part or to skip some of the questions, it will not affect your current or future relationship with the researchers.
+            If you decide to take part, you are free to withdraw at any time.
+        </p>
+        <p>
+            <h2>If you have questions: </h2>
+            The researchers conducting this study are Alan Lundgard and Professors Steve Oney and Walter Lasecki.
+            If you have questions, you may contact Alan Lundgard at arlu@umich.edu or at 1-989-600-8595.
+        </p>
+        <p>
+            <h2>Statement of Consent:</h2>
+            I have read the above information, and have received answers to any questions I asked. I consent to take part in the study.
+            To submit this consent form, please enter your email address and click the Submit button.
+            <form action="/" method="post">
+                <input type="text" name="id" value="Enter your email address" />
+                <input type="submit" value="Submit" />
+            </form>
+        </p>
     <% } %>
 
 </body>

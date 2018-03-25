@@ -1,34 +1,27 @@
-import { Request, Response } from 'express';
-
-let process = require('../models/process.ts');
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+let process = require('../models/db.ts');
 class processController {
-
-    constructor() {};
-
-    public get(req: Request, res: Response) {
+    constructor() { }
+    ;
+    get(req, res) {
         let id = req.query.id;
-        if (id === undefined) id = 'undefined';
+        if (id === undefined)
+            id = 'undefined';
         res.render('home', {
             id: id
         });
     }
-
-    public post(req: Request, res: Response) {
-        
+    post(req, res) {
         let data = req.body;
         data.username = req.session.username;
-
         console.log(data);
-
         // query a database and save data
         let DB_Proc = new process(data);
         DB_Proc.save();
-
         // res.status(200).send(data);
         res.redirect('/task'); // go to next task
     }
-
 }
-
-export default new processController()
+exports.default = new processController();
+//# sourceMappingURL=process.js.map

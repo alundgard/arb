@@ -30,9 +30,9 @@ class App {
 		this.app.use(bodyParser.urlencoded({ extended: false }));
 		this.app.use(express.static(path.join(__dirname, '../public')));
 		this.app.use(session({
-			secret: 'this-is-a-secret-token',
+			secret: 'this-is-a-secret-token', // FIXME!
 			cookie: { maxAge: 60000 }
-		})); // FIXME!
+		}));
 		this.app.set('views', path.join(__dirname, '../views'));
 		this.app.set('view engine', 'ejs');
 	}	

@@ -4,14 +4,22 @@ class homeController {
     constructor() { }
     ;
     get(req, res) {
+        let id = req.query.id;
+        if (id === undefined)
+            id = false;
         res.render('home', {
-            title: 'Home Page Title'
+            id: id
         });
     }
     post(req, res) {
         const data = req.body;
-        // query a database and save data
-        res.status(200).send(data);
+        // check if username already in db
+        // if so, create different username
+        let sessData = req.session;
+        sessData.username = data.id;
+        res.render('home', {
+            id: data.id
+        });
     }
 }
 exports.default = new homeController();
