@@ -11,7 +11,8 @@
     <h1>Shared Web Browsing Study</h1>
     <% if (id) { %>
         <p>You are logged in as <%= id %>.</p>
-        <p>If this is corrent, click the Go to Instructions button.</p>
+        <p>If this is incorrent, please go back and re-enter your email address.</p>
+        <p>Otherwise, continue to the study instructions page by clicking the link below.</p>
         <form action="/instr" method="get">
             <input type="submit" value="Go to Instructions Page" />
         </form>

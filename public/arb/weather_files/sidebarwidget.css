@@ -1,0 +1,104 @@
+﻿        .cc-swipe {
+            overflow: hidden;
+            visibility: hidden;
+            position: relative;
+        }
+
+        .cc-swipe-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cc-swipe-wrap > div {
+            float: left;
+            width: 100%;
+            position: relative;
+        }
+
+        .cc-sidebar-widget {
+            /*width: 270px !important;*/
+            padding-top: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            /*background-color: #cccccc;*/
+        }
+
+        .cc-main-image-container {
+            margin-bottom: 10px;
+            padding: 0 0 0 0;
+            position: relative;
+            width: 270px;
+            overflow: hidden;
+        }
+
+
+        .cc-main-image-container .cc-video-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+
+        .cc-main-image {
+            width: 270px;
+            
+        }
+
+        .cc-thumb {
+            float: left;
+            position: relative;
+            width: 125px;
+            height: 110px;
+            overflow: hidden;
+        }
+
+
+        .cc-thumb .cc-video-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .cc-thumb-image {
+            border: 0;
+            vertical-align: baseline;
+            width: 125px;
+            min-height: 110px;
+        }
+
+        .cc-s20 {
+            margin-right: 20px;
+        }
+
+        .cc-thumbnail-container {
+            margin-top: 20px;
+        }
+
+        .cc-navigation {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .cc-navigation ul {
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+            list-style: none;
+        }
+
+        .cc-navigation ul li {
+            padding: 0 0 0 0;
+            padding-left: 5px;
+            padding-right: 5px;
+            display: inline;
+            cursor: pointer;
+        }
+
+        .cc-current-page {
+            color: red;
+        }
+
+        .cc-email-info a {
+            text-decoration: none;
+            color: inherit !important;
+            font-weight: bold;
+        }

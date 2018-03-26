@@ -8,9 +8,14 @@ class taskController {
 
     public get(req: Request, res: Response) {
 
-        // Todo: Get correct task based on user progress
+        console.log('task username',req.session.username);
 
-        res.redirect('/arb/1A.html');
+        // Todo: Get correct task based on user progress
+        let data = req.body;
+
+        console.log('data', data);
+
+        res.redirect('/arb/1C.html');
     }
 }
 
