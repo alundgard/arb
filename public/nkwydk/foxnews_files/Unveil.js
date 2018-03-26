@@ -1,3 +1,0 @@
-/*! updated; 07-19-2016 12:49 PM */
-
-!function($){$.fn.unveil=function(threshold,callback){function unveil(){var inview=images.filter(function(){var $e=$(this);if(!$e.is(":hidden")){var wt=$w.scrollTop(),wb=wt+$w.height(),et=$e.offset().top,eb=et+$e.height();return eb>=wt-th&&wb+th>=et}});loaded=inview.trigger("unveil"),images=images.not(loaded)}var loaded,$w=$(window),th=threshold||0,retina=window.devicePixelRatio>1,attrib=retina?"data-src-retina":"data-src",images=this;return this.one("unveil",function(){var source=this.getAttribute(attrib);source=source||this.getAttribute("data-src"),source&&(this.setAttribute("src",source),"function"==typeof callback&&callback.call(this))}),$w.scroll(unveil),$w.resize(unveil),unveil(),this}}(window.jQuery||window.Zepto);

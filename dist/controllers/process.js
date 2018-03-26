@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let process = require('../models/db.ts');
+let process = require('../models/process.ts');
 class processController {
     constructor() { }
     ;

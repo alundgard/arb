@@ -2,9 +2,9 @@ import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as session from 'express-session';
 import * as path from 'path';
-import * as mongoose from 'mongoose';
 
 import { Request, Response } from 'express';
+import mongoose = require('mongoose');
 
 // Controllers
 import homeController from './controllers/home';

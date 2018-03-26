@@ -1,12 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let user = require('../models/user.ts');
+let user = require('../models/task.ts');
 class taskController {
     constructor() { }
     ;
     get(req, res) {
+        console.log('task username', req.session.username);
         // Todo: Get correct task based on user progress
-        res.redirect('/arb/1A.html');
+        let data = req.body;
+        console.log('data', data);
+        res.redirect('/arb/1C.html');
     }
 }
 exports.default = new taskController();

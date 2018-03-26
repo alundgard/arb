@@ -1,3 +1,0 @@
-/*! updated; 07-19-2016 12:49 PM */
-
-Modulr.define("FOX_PLUGINS:OnWindowResize",["jquery"],function($){var App=function(fn,threshold){if(threshold=threshold||25,"function"!=typeof fn||!$)return!1;var timeout,hasOrientation="onorientationchange"in window?!0:!1,onEvent=hasOrientation?"orientationchange":"resize";$(window).bind(onEvent,function(){clearTimeout(timeout),timeout=setTimeout(function(){fn()},threshold)})};return App});
