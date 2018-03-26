@@ -1,3 +1,3 @@
-/*! updated; 07-19-2016 12:49 PM */
+/*! updated; 02-19-2018 09:01 AM */
 
 !function(Modulr,$){var uid="FOX_TEMPLATES";if(Modulr.getInstance(uid))return!1;var domain=window.FOX_ENV_STATIC_DOMAIN,Instance=Modulr.config({instance:uid,baseDomain:domain,baseUrl:"/static/v/all/js/amd/apps/templates/app",masterFile:"/static/v/all/js/require/modulr.master.js",packages:["FOX_PLUGINS"],shim:{domain:{src:"/static/v/all/js/domain.js",exports:"FOX_ENV_STATIC_DOMAIN"},jquery:{src:"/static/v/all/js/ag.jquery.js",exports:"jQuery"},lodash:{src:"/static/v/all/js/lodash.js",exports:"_"}}});Instance.require(["main"])}(window.Modulr,window.jQuery);

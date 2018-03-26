@@ -1,1 +1,1 @@
-       admantx_callback({"admants" : ["other"],"status":"OK"});
+            admantx_callback({"admants" : [],"status":"OK"});
