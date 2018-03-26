@@ -33,16 +33,20 @@ class App {
     // Setup Routes
     routes() {
         const router = express.Router();
+        
         // Home
         router.get('/', home_1.default.get);
         router.post('/', home_1.default.post);
         this.app.use('/', router);
+
         // Instr
         router.get('/instr', instr_1.default.get);
         this.app.use('/instr', router);
+
         // Process
         router.post('/process', process_1.default.post);
         this.app.use('/process', router);
+
         // Task
         router.get('/task', task_1.default.get);
         this.app.use('/task', router);
