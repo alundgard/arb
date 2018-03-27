@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Knowing What You Don't Know</title>
+<title>Shared Web Browsing: Task 3</title>
 <script>
     function openWindow() {
-        window.open("video1.html");
+        // window.open("video1.html");
+        let arburl = encodeURI("http://cromalab.net:7654/arb/video1.html");
+        window.open("http://35.2.239.53:3000/a?url=" + arburl);
     }
 </script>
 </head>
@@ -12,7 +14,8 @@
 <body>
 
 <div>
-    <h1>Reminders</h1>
+    <h1>Task 3</h1>
+    <h2>Reminders:</h2>
     <ul>
         <li>You are recommended to not spend more than 10 minutes on each task.</li>
         <li>Don't close this window as you navigate other windows.</li>
@@ -80,7 +83,7 @@
             <input type="hidden" name="time2" id="time2" value="">
             <input type="hidden" name="qID" id="qID" value="3C Name the person who did sound engineering for the video">
             <label type="hidden" for="submit"></label>
-            <input type="submit" name="submit" value="Submit Answers" onclick="endTime(); return checkAnswers(); ">
+            <input type="submit" name="submit" value="Submit Answers and Go To Next Task" onclick="endTime(); return checkAnswers(); ">
     </ol>
     </form>
 </div>
