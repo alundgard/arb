@@ -9,10 +9,13 @@ class taskController {
     public get(req: Request, res: Response) {
         let id = req.session.username;
         console.log("Task, Logged in as: ", id);
+
+        let next = req.query.next;
+        console.log("Next task is: ", next);
        
         // Todo: Get correct task based on user progress
 
-        res.redirect('/arb/1C.html');
+        res.redirect('/arb/' + next + '.html');
     }
 }
 

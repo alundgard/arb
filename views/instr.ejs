@@ -5,11 +5,14 @@
 	<title>Shared Web Browsing Instructions</title>
 	<script>
 	startTasks = () => {
+		window.location = '/task/?next=1C';
+		/*
 		if(confirm("Are you sure you're ready to start the tasks?")) {
-			window.location = '/task';
+			window.location = '/task/?next=1C';
 		} else {
 			alert("Okay, we're sending you back.");
 		}
+		*/
 	}
 	</script>
 	<% console.log('Instr, Logged in as: ', id) %>

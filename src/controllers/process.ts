@@ -13,10 +13,9 @@ class processController {
     }
 
     public post(req: Request, res: Response) {
-        
         let data = req.body;
+        let next = req.query.next;
         data.username = req.session.username;
-
         console.log(data);
 
         // query a database and save data
@@ -24,7 +23,7 @@ class processController {
         DB_Proc.save();
 
         // res.status(200).send(data);
-        res.redirect('/task'); // go to next task
+        res.redirect('/task/?next=' + next); // go to next task
     }
 
 }
