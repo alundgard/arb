@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-let process = require('../models/process.ts');
+let process = require('../models/process');
 
 class processController {
 
@@ -9,9 +9,7 @@ class processController {
     public get(req: Request, res: Response) {
         let id = req.query.id;
         if (id === undefined) id = 'undefined';
-        res.render('home', {
-            id: id
-        });
+        res.render('home', { id: id });
     }
 
     public post(req: Request, res: Response) {

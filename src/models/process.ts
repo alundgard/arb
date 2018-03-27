@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 var processSchema = mongoose.Schema({
 
+    username: String,
     taskAnswer: String,
     task1: String,
     task2: String,
@@ -13,8 +14,7 @@ var processSchema = mongoose.Schema({
     time1: String,
     time2: String,
     qID: String,
-    submit: String,
-    username: String
+    submit: String
 
 });
 

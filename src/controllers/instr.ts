@@ -5,13 +5,8 @@ class instrController {
     constructor() {};
 
     public get(req: Request, res: Response) {
-        
-        let username = req.session.username;
-        console.log('username', username);
-
-        res.render('instr', {
-            title: 'Instructions'
-        });
+        let id = req.session.username;
+        res.render('instr', {id});
     }
 }
 

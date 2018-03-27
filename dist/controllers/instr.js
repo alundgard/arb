@@ -5,10 +5,8 @@ class instrController {
     ;
     get(req, res) {
         let username = req.session.username;
-        console.log('username', username);
-        res.render('instr', {
-            title: 'Instructions'
-        });
+        console.log('req.session.username', req.session.username);
+        res.render('instr');
     }
 }
 exports.default = new instrController();

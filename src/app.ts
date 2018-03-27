@@ -4,7 +4,7 @@ import * as session from 'express-session';
 import * as path from 'path';
 
 import { Request, Response } from 'express';
-import mongoose = require('mongoose');
+import mongoose = require('mongoose'); // FIXME! require
 
 // Controllers
 import homeController from './controllers/home';
@@ -12,7 +12,7 @@ import instrController from './controllers/instr';
 import processController from './controllers/process';
 import taskController from './controllers/task';
 
-//
+// App
 class App {
 
 	public app: express.Application;
@@ -31,7 +31,7 @@ class App {
 		this.app.use(express.static(path.join(__dirname, '../public')));
 		this.app.use(session({
 			secret: 'this-is-a-secret-token', // FIXME!
-			cookie: { maxAge: 60000 }
+			cookie: { maxAge: 24 * 60 * 60 * 1000 } // 1 day
 		}));
 		this.app.set('views', path.join(__dirname, '../views'));
 		this.app.set('view engine', 'ejs');

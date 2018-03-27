@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let process = require('../models/process.ts');
+let process = require('../models/process');
 class processController {
     constructor() { }
     ;
@@ -8,9 +8,7 @@ class processController {
         let id = req.query.id;
         if (id === undefined)
             id = 'undefined';
-        res.render('home', {
-            id: id
-        });
+        res.render('home', { id: id });
     }
     post(req, res) {
         let data = req.body;
