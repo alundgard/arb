@@ -1,10 +1,9 @@
 import app from './app';
+import config from './config'
 
-const port = 1234;
-
-const server = app.listen(port, (err) => {
+const server = app.listen(config.port, (err) => {
 	if(err) { return console.log(err) }
-	return console.log(`Server is listening on ${port}`);
+	return console.log(`Server is listening on ${config.port}`);
 });
 
 export default server;

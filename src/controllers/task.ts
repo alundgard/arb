@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import config from '../config';
 
 let user = require('../models/task');
 
@@ -15,7 +16,7 @@ class taskController {
        
         // Todo: Get correct task based on user progress
 
-        res.redirect('/arb/' + next + '.html');
+        res.redirect('/arb/' + next + '.html?ip=' + config.ip);
     }
 }
 

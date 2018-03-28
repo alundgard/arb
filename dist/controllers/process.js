@@ -12,13 +12,14 @@ class processController {
     }
     post(req, res) {
         let data = req.body;
+        let next = req.query.next;
         data.username = req.session.username;
         console.log(data);
         // query a database and save data
         let DB_Proc = new process(data);
         DB_Proc.save();
         // res.status(200).send(data);
-        res.redirect('/task'); // go to next task
+        res.redirect('/task/?next=' + next); // go to next task
     }
 }
 exports.default = new processController();

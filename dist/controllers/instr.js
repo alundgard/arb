@@ -4,9 +4,8 @@ class instrController {
     constructor() { }
     ;
     get(req, res) {
-        let username = req.session.username;
-        console.log('req.session.username', req.session.username);
-        res.render('instr');
+        let id = req.session.username;
+        res.render('instr', { id });
     }
 }
 exports.default = new instrController();

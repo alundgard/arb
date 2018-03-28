@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Shared Web Browsing: Task 7</title>
+<title>Task Page 7</title>
 <script>
+    function gip(name) {
+        let url = new URL(window.location.href);
+        let ip = url.searchParams.get("ip");
+        return ip;
+    }
     function openWindow() {
         // window.open("weather1.html");
+        let ip = gip("ip");
         let arburl = encodeURI("http://cromalab.net:7654/arb/weather1.html");
-        window.open("http://35.2.239.53:3000/a?url=" + arburl);
+        window.open("http://" + ip + ":3000/a?url=" + arburl);
     }
 </script>
 </head>
@@ -14,10 +20,11 @@
 <body>
 
 <div>
-    <h1>Task 7: Reminders</h1>
+    <h1>Task 7</h1>
+    <h2>Reminders: </h2>
     <ul>
         <li>You are recommended to not spend more than 10 minutes on each task.</li>
-        <li>Don't close this window as you navigate other windows.</li>
+        <li>Don't close this tab as you navigate other tabs.</li>
         <li>Survey questions are below the button.</li>
     </ul>
     <h2>The following button will open a weather forecast for Honolulu, Hawaii in a new Shared Webpage tab. 
