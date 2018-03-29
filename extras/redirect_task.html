@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="config.js"></script>
+	<script src="verify.js"></script>
+	<script>
+
+		console.log('ARB_IP', ARB_IP); // arb ip address from config.js
+		console.log('VERIFY', VERIFY); // verify code from verify.js
+		var arblink = ARB_IP + "?";
+
+		// var va = VERIFY * KEY;
+		// console.log(va);
+		// var vb = String(va / KEY);
+		// console.log(vb);
+
+		// function for getting URL parameters
+		function gup(name) {
+		  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+		  var regexS = "[\\?&]"+name+"=([^&#]*)";
+		  var regex = new RegExp(regexS);
+		  var results = regex.exec(window.location.href);
+		  if(results == null)
+		    return "";
+		  else return unescape(results[1]);
+		}
+
+		// check verification code
+		function checkVerify() {
+			let val = $('#verify').val();
+
+			if (String(val) === VERIFY) {
+				alert('Correct!');
+
+				// is assigntmentId is a URL parameter
+				if((aid = gup("assignmentId"))!="" && $(form_selector).length>0) {
+
+					// If the HIT hasn't been accepted yet, disabled the form fields.
+					if(aid == "ASSIGNMENT_ID_NOT_AVAILABLE") {
+						$('input,textarea,select').attr("DISABLED", "disabled");
+					}
+					// Add a new hidden input element with name="assignmentId" that
+					// with assignmentId as its value.
+					var aid_input = $("<input type='hidden' name='assignmentId' value='" + aid + "'>").appendTo($(form_selector));
+					var workerId_input = $("<input type='hidden' name='workerId' value='" + gup("workerId") + "'>").appendTo($(form_selector));
+					var hitId_input = $("<input type='hidden' name='hitId' value='" + gup("hitId") + "'>").appendTo($(form_selector));
+
+					// Make sure the submit form's method is POST
+					$(form_selector).attr('method', 'POST');
+
+					// Set the Action of the form to the provided "turkSubmitTo" field
+					if((submit_url=gup("turkSubmitTo"))!="") {
+						$(form_selector).attr('action', submit_url + '/mturk/externalSubmit');
+					}
+				}		
+			}
+			else alert('ERROR: Incorrect Verification Code. Please enter a valid 4-digit code.');
+		}
+
+		// gets the redirect link for workers
+		function getLink() {
+			var mturkp = window.location.href.split('?')[1] + '&'; // get mturk params
+			var enc = '&enc=' + VERIFY * KEY; // encrypt verification code (*)
+			var key = '&key=' + KEY; // send verification key
+			var loc = arblink + mturkp + enc + key;
+
+			$('#link').text(loc);
+			// window.open(loc);
+		}
+	</script>
+</head>
+<body>
+	<h1>Copy this link into a Google Chrome tab and open it to begin the task immediately.</h1>
+	<input type="button" value="Copy Link" onclick="getLink()" />
+	<div id="link"></div>
+
+	<h2>When you have successfully completed the task, you will receive a 4-digit Verification Code.</h2>
+	<form onsubmit="checkVerify()">
+		<label for="verify">Enter the 4-digit Verification Code here finish submitting the HIT:</label>
+		<input id="verify" type="text">
+		<input type="submit" value="Submit" />
+</form>
+</body>
+</html>
