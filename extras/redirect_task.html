@@ -28,6 +28,7 @@
 				$('#mturk_form').submit();
 			}
 			else alert('ERROR: Incorrect Verification Code. Please enter a valid 4-digit code.');
+			return false;
 		}
 
 		$(document).ready(() => {
@@ -80,11 +81,9 @@
 	<h1 id="showurl"></h1>
 	<h2>Keep the current page open!
 		When you have successfully completed the task, you will receive a 4-digit Task Completion Code to enter below.</h2>
-	<form onsubmit="checkVerify()">
-		<label for="verify">Enter the 4-digit Task Completion Code here finish submitting the HIT:</label>
-		<input id="verify" type="text">
-		<input type="submit" value="Submit" />
-	</form>
+	<label for="verify">Enter the 4-digit Task Completion Code here finish submitting the HIT:</label>
+	<input id="verify" type="text">
+	<button onclick="checkVerify()">Submit</button>
 	<form id="mturk_form"></form>
 </body>
 </html>
