@@ -8,8 +8,6 @@
 	<!-- <script src="mturk.js"></script> -->
 	<script>
 
-		const form_selector = "#mturk_form";
-
 		// function for getting URL parameters
 		function gup(name) {
 			name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
@@ -28,12 +26,11 @@
 				$('#mturk_form').submit();
 			}
 			else alert('ERROR: Incorrect Verification Code. Please enter a valid 4-digit code.');
-			return false;
 		}
 
 		$(document).ready(() => {
 	
-			$('#showurl').text(String(window.location));
+			const form_selector = "#mturk_form";
 
 			// Add a new hidden input element with name="assignmentId" with assignmentId as its value
 			var aid_input = $("<input type='hidden' name='assignmentId' value='" + gup("assignmentId") + "'>").appendTo($(form_selector));
@@ -51,7 +48,6 @@
 			console.log('ARB_IP', ARB_IP); // arb ip address from config.js
 			console.log('VERIFY', VERIFY); // verify code from verify.js
 			var arblink = ARB_IP + '?';
-			var form_selector = "#mturk_form";
 			// var va = VERIFY * KEY; console.log(va);
 			// var vb = String(va / KEY); console.log(vb);
 			var mturkp = window.location.href.split('?')[1] + '&'; // get mturk params
@@ -59,6 +55,10 @@
 			var key = '&key=' + KEY; // send verification key
 			var loc = arblink + mturkp + enc + key;
 			$('#link').text(loc);
+
+			let str = $("#mturk_form").serialize();
+			$('#showurl').text(str);
+
 		});
 	</script>
 
@@ -81,9 +81,11 @@
 	<h1 id="showurl"></h1>
 	<h2>Keep the current page open!
 		When you have successfully completed the task, you will receive a 4-digit Task Completion Code to enter below.</h2>
-	<label for="verify">Enter the 4-digit Task Completion Code here finish submitting the HIT:</label>
-	<input id="verify" type="text">
-	<button onclick="checkVerify()">Submit</button>
+	<form onsubmit="checkVerify()">
+		<label for="verify">Enter the 4-digit Task Completion Code here finish submitting the HIT:</label>
+		<input id="verify" type="text">
+		<input type="submit" value="Submit" />
+	</form>
 	<form id="mturk_form"></form>
 </body>
 </html>
