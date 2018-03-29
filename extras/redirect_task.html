@@ -57,9 +57,6 @@
 			var loc = arblink + mturkp + enc + key;
 			$('#link').text(loc);
 
-			let str = $("#mturk_form").serialize();
-			$('#showurl').text(str);
-
 		});
 	</script>
 
@@ -67,9 +64,9 @@
 		.container {
 			height:auto;
 			border: 1px solid red;
+			word-wrap: break-word;
 		}
 		#link {
-			width: 100px;
 			height: auto;
 			color: blue;
 		}
