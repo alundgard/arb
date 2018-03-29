@@ -7,22 +7,21 @@
 	<script src="verify.js"></script>
 	<script src="mturk.js"></script>
 	<script>
+		
+		// check verification code and submit
+		function checkVerify() {
+			let val = $('#verify').val();
+			if (String(val) === VERIFY) $('#mturk_form').submit();
+			else alert('ERROR: Incorrect Verification Code. Please enter a valid 4-digit code.');
+		}
+
 		$(document).ready(() => {
 			console.log('ARB_IP', ARB_IP); // arb ip address from config.js
 			console.log('VERIFY', VERIFY); // verify code from verify.js
 			var arblink = ARB_IP + '?';
 			var form_selector = "#mturk_form";
-
 			// var va = VERIFY * KEY; console.log(va);
 			// var vb = String(va / KEY); console.log(vb);
-
-			// check verification code and submit
-			function checkVerify() {
-				let val = $('#verify').val();
-				if (String(val) === VERIFY) {$('#mturk_form').submit();}
-				else alert('ERROR: Incorrect Verification Code. Please enter a valid 4-digit code.');
-			}
-
 			var mturkp = window.location.href.split('?')[1] + '&'; // get mturk params
 			var enc = '&enc=' + VERIFY * KEY; // encrypt verification code (*)
 			var key = '&key=' + KEY; // send verification key
@@ -30,6 +29,7 @@
 			$('#link').text(loc);
 		});
 	</script>
+
 	<style>
 		.container {
 			height:auto;
