@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>Tutorial Instructions</title>
+	<style>
+		#container{
+			position: relative;
+			width: 100%;
+		}
+		
+		#title{
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			margin: 0 auto;
+			text-align: center;
+		}
+		
+		.introMess{
+			position: relative;
+			width: 90%;
+			margin: 0 auto;
+		}
+		
+		.normal{
+			font-size: 20px;
+			display: block;
+			margin-bottom: 15px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<div id="title">
+			<span>Instructions</span>
+		</div>
+	</div>
+	 <div class="introMess">
+		<ul>
+			<li><p>You will be collaborating with a blind/low-vision participant to retrieve information from a webpage.</p></li>
+			<li><p>Via a chat window, you will interact with the participant.</p></li>
+			<li><p>In the example below, Alice is an MTurk worker and Bob is the blind/low-vision participant.</p></li>
+			<li><p>They can communicate with each other via a chat panel.</p></li>
+			<li><p>As the MTurk worker, Alice can propose actions to take within the webpage.</p></li>
+			<li><p>For example, Alice can propose to click on the Locations and Hours link.</p></li>
+		</ul>
+		<h2>Alice's View (MTurk Worker):</h2>
+		<img src="/arb/mturk/mturk_files/lucky_kitchen1.gif" height="200%">
+		<ul>
+			<li><p>Bob must accept or reject the actions proposed by Alice.</p></li>
+			<li><p>When Bob accepts an action, it is executed and both Alice and Bob's pages update accordingly.</p></li>
+		</ul>
+		<h2>Bob's View (Blind/Low-Vision Participant):</h2>
+		<img src="/arb/mturk/mturk_files/lucky_kitchen2.gif" height="200%">
+		<br/>
+		<br/>
+		<br/>
+		<!--
+		<span class="normal">This is the tutorial example page. Once the workers successfully pass the tutorial, have them click on the "finished tutorial" button.</span>
+        <span class="normal">When this button is clicked, it will forward to the tutorial page, which is different depending on what version of LT you are using! <br/><br/>For this, it will forward to: https://legionpowered.net/release/beta/LegionTools/tutorialDone.html</span>
+		-->
+		<p>If you have read and understood the instructions, click the button below to continue.</p>
+		<button onclick="window.location='https://legionpowered.net/release/beta/LegionTools/tutorialDone.html'">Continue</button>
+        </div>
+</body>
+</html>
