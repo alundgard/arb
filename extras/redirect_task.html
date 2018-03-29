@@ -24,11 +24,15 @@
 		// check verification code and submit
 		function checkVerify() {
 			let val = $('#verify').val();
-			if (String(val) === VERIFY) $('#mturk_form').submit();
+			if (String(val) === VERIFY) {
+				$('#mturk_form').submit();
+			}
 			else alert('ERROR: Incorrect Verification Code. Please enter a valid 4-digit code.');
 		}
 
 		$(document).ready(() => {
+	
+			$('#showurl').text(String(window.location));
 
 			// Add a new hidden input element with name="assignmentId" with assignmentId as its value
 			var aid_input = $("<input type='hidden' name='assignmentId' value='" + gup("assignmentId") + "'>").appendTo($(form_selector));
@@ -73,6 +77,7 @@
 <body>
 	<h1>Copy and paste the entire <span style="color:blue; border: 1px solid red;">blue URL</span> into a separate Google Chrome tab to begin the task immediately:</h1>
 	<div class="container"><h1 id="link"></h1></div>
+	<h1 id="showurl"></h1>
 	<h2>Keep the current page open!
 		When you have successfully completed the task, you will receive a 4-digit Task Completion Code to enter below.</h2>
 	<form onsubmit="checkVerify()">
