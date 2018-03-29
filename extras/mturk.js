@@ -10,7 +10,7 @@
  **/
 
 // selector used by jquery to identify your form
-var form_selector = "#mturk_form";
+const form_selector = "#mturk_form";
 
 // function for getting URL parameters
 function gup(name) {
@@ -24,26 +24,16 @@ function gup(name) {
 }
 
 $(document).ready(function () {
-  // is assigntmentId is a URL parameter
-  if((aid = gup("assignmentId"))!="" && $(form_selector).length>0) {
+  // Add a new hidden input element with name="assignmentId" with assignmentId as its value
+  var aid_input = $("<input type='hidden' name='assignmentId' value='" + gup("assignmentId") + "'>").appendTo($(form_selector));
+  var workerId_input = $("<input type='hidden' name='workerId' value='" + gup("workerId") + "'>").appendTo($(form_selector));
+  var hitId_input = $("<input type='hidden' name='hitId' value='" + gup("hitId") + "'>").appendTo($(form_selector));
 
-    // If the HIT hasn't been accepted yet, disabled the form fields.
-    if(aid == "ASSIGNMENT_ID_NOT_AVAILABLE") {
-	    $('input,textarea,select').attr("DISABLED", "disabled");
-    }
+  // Make sure the submit form's method is POST
+  $(form_selector).attr('method', 'POST');
 
-    // Add a new hidden input element with name="assignmentId" that
-    // with assignmentId as its value.
-    var aid_input = $("<input type='hidden' name='assignmentId' value='" + aid + "'>").appendTo($(form_selector));
-    var workerId_input = $("<input type='hidden' name='workerId' value='" + gup("workerId") + "'>").appendTo($(form_selector));
-    var hitId_input = $("<input type='hidden' name='hitId' value='" + gup("hitId") + "'>").appendTo($(form_selector));
-
-    // Make sure the submit form's method is POST
-    $(form_selector).attr('method', 'POST');
-
-    // Set the Action of the form to the provided "turkSubmitTo" field
-    if((submit_url=gup("turkSubmitTo"))!="") {
-      $(form_selector).attr('action', submit_url + '/mturk/externalSubmit');
-    }
+  // Set the Action of the form to the provided "turkSubmitTo" field
+  if((submit_url=gup("turkSubmitTo"))!="") {
+    $(form_selector).attr('action', submit_url + '/mturk/externalSubmit');
   }
 });
