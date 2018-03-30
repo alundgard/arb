@@ -10,6 +10,7 @@ const home_1 = require("./controllers/home");
 const instr_1 = require("./controllers/instr");
 const process_1 = require("./controllers/process");
 const task_1 = require("./controllers/task");
+const survey_1 = require("./controllers/survey");
 // App
 class App {
     constructor() {
@@ -46,6 +47,9 @@ class App {
         // Task
         router.get('/task', task_1.default.get);
         this.app.use('/task', router);
+        // Survey
+        router.post('/survey', survey_1.default.post);
+        this.app.use('/process', router);
     }
     // Setup DB
     db() {

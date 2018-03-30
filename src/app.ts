@@ -11,6 +11,7 @@ import homeController from './controllers/home';
 import instrController from './controllers/instr';
 import processController from './controllers/process';
 import taskController from './controllers/task';
+import surveyController from './controllers/survey';
 
 // App
 class App {
@@ -57,6 +58,10 @@ class App {
 		// Task
 		router.get('/task', taskController.get);
 		this.app.use('/task', router);
+
+		// Survey
+		router.post('/survey', surveyController.post);
+		this.app.use('/process', router);
 
 	}
 
