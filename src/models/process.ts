@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 
+/*
 var processSchema = mongoose.Schema({
 
     username: String,
@@ -10,6 +11,19 @@ var processSchema = mongoose.Schema({
     task4: String,
     task5: String,
     task6: String,
+    timestamp: String,
+    time1: String,
+    time2: String,
+    qID: String,
+    submit: String
+
+});
+*/
+
+var processSchema = mongoose.Schema({
+
+    username: String,
+    taskAnswer: String,
     timestamp: String,
     time1: String,
     time2: String,

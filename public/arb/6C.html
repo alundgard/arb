@@ -38,123 +38,38 @@
 <div>
     <h2>Submit answer here:</h2>
     <form action="/process/?next=7C" method="post" name="myform">
-        <ol>
-        <li>
         <label for="taskAnswer">How many upvotes does the original post have:</label>
-        <input name="taskAnswer" id="taskAnswer" type="text" style="border: solid 1px" oninput="endTime()"><br>
-        </li>
-        <li>
-        <label for="task1">How difficult was the task?(1 is easy, 5 is hard)</label>
-            <select name="task1" id="task1" onchange="endTime()">
-            <option value=""></option>
-            <option value=1>1</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5>5</option></select><br>
-        </li>
-        <li>
-        <label for="task2">If you completed the task, how confident are you in your answer?(1 is confident, 5 is not confident</label>
-            <select name="task2" id="task2" onchange="endTime()">
-            <option value=""></option>
-            <option value=1>1</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5>5</option></select><br>
-        </li>
-        <li>
-        <label for="task3">If you could not complete the task, what do you think happened?</label>
-            <select name="task3" id="task3" onchange="endTime()">
-            <option value=""></option>
-            <option value="easy">Not Applicable</option>
-            <option value="hard">The information was hidden or not easily searchable</option>
-            <option value="inaccessible">I cannot access the information with my screen reader</option>
-            <option value="impossible">The information does not exist on the page</option>
-            <option value="other">Other Reason</option></select><br>
-        </li>
-        <li>
-        <label for="task4">If you selected Other Reason for the previous question, please explain.</label><br>
-            <textarea style="border: solid 1px" name="task4" id="task4" cols="50" rows="3" onchange="endTime()"></textarea><br>
-        </li>
-        <li>
-        <label for="task5">What difficulties did you encounter and why do you think you encountered them?</label><br>
-            <textarea style="border: solid 1px" name="task5" id="task5" cols="50" rows="3" onchange="endTime()"></textarea><br>
-        </li>
-        <li>
-        <label for="task6">What tips, tricks, shortcuts, or other knowledge did you use when completing this task?</label><br>
-            <textarea style="border: solid 1px" name="task6" id="task6" cols="50" rows="3" onchange="endTime()"></textarea><br>
-        </li>
-            <input type="hidden" name="timestamp" id="timestamp" value="">
-            <input type="hidden" name="time1" id="time1" value="">
-            <input type="hidden" name="time2" id="time2" value="">
-            <input type="hidden" name="qID" id="qID" value="6C How many upvotes does the original post have">
-            <label type="hidden" for="submit"></label>
-            <input type="submit" name="submit" value="Submit Answers and Go To Next Task" onclick="endTime(); return checkAnswers(); ">
-    </ol>
+        <input name="taskAnswer" id="taskAnswer" type="text" style="border: solid 1px" oninput="endTime()">
+        <input type="hidden" name="timestamp" id="timestamp" value="">
+        <input type="hidden" name="time1" id="time1" value="">
+        <input type="hidden" name="time2" id="time2" value="">
+        <input type="hidden" name="qID" id="qID" value="6C How many upvotes does the original post have">
+        <label type="hidden" for="submit"></label>
+        <input type="submit" name="submit" value="Submit Answer and Go To Next Task" onclick="endTime(); return checkAnswers(); ">
     </form>
 </div>
 
 <script type="text/javascript">
     //get start time on page load
-    var d = new Date();
-    var start=d.getTime();
+    var d = new Date(); var start=d.getTime();
     document.myform.timestamp.value=d
     document.myform.time1.value=start;
 
-    //get end time on submit click
+    // get end time on submit click
     function endTime() {
-        var d2 = new Date();
-        var end=d2.getTime();
-        if (document.myform.time2.value=="" || document.myform.time2.value==null) {
-            document.myform.time2.value=end;
-        }
-    }
-
+        var d2 = new Date(); var end=d2.getTime();
+        if (document.myform.time2.value=="" || document.myform.time2.value==null) { document.myform.time2.value=end; }
+    };
     function checkAnswers() {
         var x = document.myform.taskAnswer.value;
         if (x=="" || x==null) {
-            alert("Please provide an answer for question 1: How many upvotes does the original post have.");
-            return false;
-        }
-        var x = document.myform.task1.value;
-        if (x=="" || x==null) {
-            alert("Please provide an answer for question 2: How difficult was the task?(1 is easy, 5 is hard)");
-            return false;
-        }
-        var x = document.myform.task2.value;
-        if (x=="" || x==null) {
-            alert("Please provide an answer for question 3: If you completed the task, how confident are you in your answer?");
-            return false;
-        }
-        var x = document.myform.task3.value;
-        if (x=="" || x==null) {
-            alert("Please provide an answer for question 4: If you could not complete the task, what do you think happened?");
-            return false;
-        }
-        var x = document.myform.task3.value;
-        if (x=="other") {
-            var y = document.myform.task4.value;
-            if (y=="" || y==null) {
-                alert("Please provide an answer for question 5: If you selected Other Reason for the previous question, please explain.")
-            }
-        }
-        var x = document.myform.task5.value;
-        if (x=="" || x==null) {
-            alert("Please provide an answer for question 6: What difficulties did you encounter and why do you think you encountered them?");
-            return false;
-        }
-        var x = document.myform.task6.value;
-        if (x=="" || x==null) {
-            alert("Please provide an answer for question 7: What tips, tricks, shortcuts, or other knowledge did you use when completing this task?");
+            alert("Please provide an answer for the question: How many upvotes does the original post have.");
             return false;
         }
         else {return true}
-    }
-
-
+    };
 </script>
-
+    
 </body>
 
 </html>
