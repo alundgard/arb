@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Task Page 2</title>
+<script>
+    function gip(name) {
+        let url = new URL(window.location.href);
+        let ip = url.searchParams.get("ip");
+        return ip;
+    }
+    function openWindow() {
+        // window.open("Stinkdigital.html");
+        let ip = gip("ip");
+        let arburl = encodeURI("http://cromalab.net:7654/arb/Stinkdigital.html");
+        window.open("http://" + ip + ":3000/a?url=" + arburl);
+    }
+</script>
+</head>
+    
+<body>
+
+<div>
+    <h1>Task Page 2</h1>
+    <h2>Reminders:</h2>
+    <ul>
+        <li>You are recommended to not spend more than 10 minutes on each task.</li>
+        <li>Don't close this tab as you navigate to the Shared Webpage tab.</li>
+        <li>If the Shared Webpage content disappears at any point, try refreshing the page.</li>
+        <li>When you have found the info on the Shared Webpage, close its tab and return to this page.</li>
+        <li>Survey questions are below the button.</li>
+    </ul>
+    <h2>The following button will open a Shared Webpage in a new tab for a company called Stinkdigital.</h2>
+    <h2>If the information exists on the webpage, name one client of Stinkdigital.</h2>
+    <h2>Please provide your answer at the bottom of the current page.</h2>
+</div>
+
+<button onclick="openWindow()">Open Shared Webpage</button>
+
+<div>
+    <h2>Submit answer here:</h2>
+    <form action="/process/?next=3C" method="post" name="myform">
+        <label for="taskAnswer">Name one client of Stinkdigital:</label>
+        <input name="taskAnswer" id="taskAnswer" type="text" style="border: solid 1px" oninput="endTime()">
+        <input type="hidden" name="timestamp" id="timestamp" value="">
+        <input type="hidden" name="time1" id="time1" value="">
+        <input type="hidden" name="time2" id="time2" value="">
+        <input type="hidden" name="qID" id="qID" value="2C Name one client of Stinkdigital">
+        <label type="hidden" for="submit"></label>
+        <input type="submit" name="submit" value="Submit Answer and Go To Next Task" onclick="endTime(); return checkAnswers(); ">
+    </form>
+</div>
+
+<script type="text/javascript">
+    //get start time on page load
+    var d = new Date(); var start=d.getTime();
+    document.myform.timestamp.value=d
+    document.myform.time1.value=start;
+
+    // get end time on submit click
+    function endTime() {
+        var d2 = new Date(); var end=d2.getTime();
+        if (document.myform.time2.value=="" || document.myform.time2.value==null) { document.myform.time2.value=end; }
+    };
+    function checkAnswers() {
+        var x = document.myform.taskAnswer.value;
+        if (x=="" || x==null) {
+            alert("Please provide an answer for the question: Name one client of Stinkdigital.");
+            return false;
+        }
+        else {return true}
+    };
+</script>
+
+</body>
+
+</html>

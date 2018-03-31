@@ -1,3 +1,0 @@
-/*! updated; 02-19-2018 09:01 AM */
-
-Modulr.define("FOX_PLUGINS:OnScroll",["jquery"],function($){var App=function(fn,threshold){function getDir(val){var ret=val>curr?"down":"up";return ret}if(threshold="number"!=typeof threshold?25:threshold,"function"!=typeof fn||!$)return!1;var timeout,win=$(window),onEvent="scroll",curr=win.scrollTop(),set=function(){var val=win.scrollTop(),dir=getDir(val);curr=val,fn(dir)};win.bind(onEvent,function(){0===threshold?set():(clearTimeout(timeout),timeout=setTimeout(function(){set()},threshold))})};return App});

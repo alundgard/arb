@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <title>Shared Web Browsing Survey</title>
+</head>
+<body>
+    <h1>You have finished all of the Shared Browsing tasks! Before you go, please fill out the following brief survey.</h1>
+    <div>
+            <h2>Please respond to the 10 questions below:</h2>
+            <form action="/survey/" method="post" name="myform">
+            <ol>
+                <!-- ======================================================================== -->
+                <!-- Perceived ease of use (PE) -->
+                <li>
+                <label for="pe1">I find the shared web browser easy to use. (1 is strongly disagree, 7 is strongly agree)</label>
+                    <select name="pe1" id="pe1">
+                    <option value=""></option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=5>6</option><option value=5>7</option>
+                    </select><br>
+                </li>
+
+                <!-- ======================================================================== -->
+                <!-- Perceived usefulness (PU) -->
+                <li>
+                <label for="pu1">Using a shared web browser could make it easier to navigate the web. (1 is strongly disagree, 7 is strongly agree)</label>
+                <select name="pu1" id="pu1">
+                <option value=""></option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=5>6</option><option value=5>7</option>
+                </select><br>
+                </li>
+
+                <!-- ======================================================================== -->
+                <!-- Attitude (AT) -->
+                <li>
+                <label for="at1">Web navigation through a shared web browser is a good idea. (1 is strongly disagree, 7 is strongly agree)</label>
+                <select name="at1" id="at1">
+                <option value=""></option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=5>6</option><option value=5>7</option>
+                </select><br>
+                </li>
+        
+                <!-- ======================================================================== -->
+                <!-- Behavioral intention (BI) -->
+                <li>
+                <label for="bi1">I would be a frequent user of a shared web browser. (1 is strongly disagree, 7 is strongly agree)</label>
+                <select name="bi1" id="bi1">
+                <option value=""></option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=5>6</option><option value=5>7</option>
+                </select><br>
+                </li>
+        
+                <!-- ======================================================================== -->
+                <!-- Self-efficacy (SE) -->
+                <li>
+                <label for="se1">I have the necessary skills for using the shared web browser. (1 is strongly disagree, 7 is strongly agree)</label>
+                <select name="se1" id="se1">
+                <option value=""></option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=5>6</option><option value=5>7</option>
+                </select><br>
+                </li>
+        
+                <!-- ======================================================================== -->
+                <!-- Subjective norm (SN) -->
+                <li>
+                <label for="sn1">I like the idea of shared web browsing based on the similarity of my values and the societal values underlying its use. (1 is strongly disagree, 7 is strongly agree)</label>
+                <select name="sn1" id="sn1">
+                <option value=""></option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=5>6</option><option value=5>7</option>
+                </select><br>
+                </li>
+
+                <!-- ======================================================================== -->
+                <!-- System accessibility (SA) -->
+                <li>
+                <label for="sa1">I have no difficulty accessing and using the shared web browsing system. (1 is strongly disagree, 7 is strongly agree)</label>
+                <select name="sa1" id="sa1">
+                <option value=""></option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=5>6</option><option value=5>7</option>
+                </select><br>
+                </li>
+
+                <!-- ======================================================================== -->
+                <!-- Miscellaneous -->
+                <li>
+                <label for="m1">What screen reader did you use while completing this study?</label>
+                <select name="m1" id="m1">
+                <option value=""></option><option value='jaws'>JAWS</option><option value='nvda'>NVDA</option><option value='voiceover'>VoiceOver</option><option value='other'>Other</option><option value="multiple">Multiple</option><option value="none">None</option>
+                </select><br>
+                </li>
+        
+                <li>
+                <label for="m2">How many years of screen reader experience do you have?</label>
+                <select name="m2" id="m2">
+                <option value=""></option><option value='lt5'>Less than 5</option><option value='6t10'>6 to 10</option><option value='11t15'>11 to 15</option><option value='16t20'>16 to 20</option><option value='gt21'>More than 21</option>
+                </select><br>
+                </li>
+        
+                <li>
+                <label for="m3">Please enter any other comments or feedback (both positive and negative).</label><br>
+                    <textarea style="border: solid 1px" name="m3" id="m3" cols="50" rows="3"></textarea><br>
+                </li>
+        
+                <input type="hidden" name="timestamp" id="timestamp" value="">
+                <label type="hidden" for="submit"></label>
+                <input type="submit" name="submit" value="Submit Answers" onclick="return checkAnswers(); ">
+            </ol>
+            </form>
+        </div>
+        
+        <script type="text/javascript">
+            //get start time on page load
+            var d = new Date();
+            document.myform.timestamp.value=d;
+            function checkAnswers() {
+
+                var x = document.myform.pe1.value;
+                if (x=="" || x==null) {
+                    alert("Please provide an answer for question 1: I find the shared web browser easy to use.");
+                    return false;
+                }
+                var x = document.myform.pu1.value;
+                if (x=="" || x==null) {
+                    alert("Please provide an answer for question 2: Using a shared web browser could make it easier to navigate the web.");
+                    return false;
+                }
+                var x = document.myform.at1.value;
+                if (x=="" || x==null) {
+                    alert("Please provide an answer for question 3: Web navigation through a shared web browser is a good idea.");
+                    return false;
+                }
+                var x = document.myform.bi1.value;
+                if (x=="" || x==null) {
+                    alert("Please provide an answer for question 4: I would be a frequent user of a shared web browser.");
+                    return false;
+                }
+                var x = document.myform.se1.value;
+                if (x=="" || x==null) {
+                    alert("Please provide an answer for question 5: I have the necessary skills for using the shared web browser.");
+                    return false;
+                }
+                var x = document.myform.sn1.value;
+                if (x=="" || x==null) {
+                    alert("Please provide an answer for question 6: I like the idea of shared web browsing based on the similarity of my values and the societal values underlying its use.");
+                    return false;
+                }
+                var x = document.myform.sa1.value;
+                if (x=="" || x==null) {
+                    alert("Please provide an answer for question 7: I have no difficulty accessing and using the shared web browsing system.");
+                    return false;
+                }
+                var x = document.myform.m1.value;
+                if (x=="" || x==null) {
+                    alert("Please provide an answer for question 8: What screen reader did you use while completing this study?");
+                    return false;
+                }
+                var x = document.myform.m2.value;
+                if (x=="" || x==null) {
+                    alert("Please provide an answer for question 9: How many years of screen reader experience do you have?");
+                    return false;
+                }
+                var x = document.myform.m3.value;
+                if (x=="" || x==null) {
+                    alert("Please provide an answer for question 10: Please enter any other comments or feedback (both positive and negative).");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+           
+</body>
+</html>
