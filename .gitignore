@@ -29,3 +29,4 @@
 .idea
 
 node_modules/
+exports/
