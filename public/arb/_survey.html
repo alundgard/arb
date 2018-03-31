@@ -6,7 +6,7 @@
 <body>
     <h1>You have finished all of the Shared Browsing tasks! Before you go, please fill out the following brief survey.</h1>
     <div>
-            <h2>Please respond to the 10 questions below:</h2>
+            <h2>Please respond to the 11 questions below:</h2>
             <form action="/survey/" method="post" name="myform">
             <ol>
                 <!-- ======================================================================== -->
@@ -89,10 +89,15 @@
                 </li>
         
                 <li>
-                <label for="m3">Please enter any other comments or feedback (both positive and negative).</label><br>
+                <label for="m3">Please comment on some of the positive aspects of the Shared Web browsing tool.</label><br>
                     <textarea style="border: solid 1px" name="m3" id="m3" cols="50" rows="3"></textarea><br>
                 </li>
-        
+
+                <li>
+                    <label for="m4">Please comment on some of the negative aspects of Shared Web browsing tool.</label><br>
+                    <textarea style="border: solid 1px" name="m4" id="m4" cols="50" rows="3"></textarea><br>
+                </li>
+
                 <input type="hidden" name="timestamp" id="timestamp" value="">
                 <label type="hidden" for="submit"></label>
                 <input type="submit" name="submit" value="Submit Answers" onclick="return checkAnswers(); ">
@@ -153,7 +158,12 @@
                 }
                 var x = document.myform.m3.value;
                 if (x=="" || x==null) {
-                    alert("Please provide an answer for question 10: Please enter any other comments or feedback (both positive and negative).");
+                    alert("Please provide an answer for question 10: Please comment on some of the positive aspects of Shared Web browsing tool.");
+                    return false;
+                }
+                var x = document.myform.m4.value;
+                if (x=="" || x==null) {
+                    alert("Please provide an answer for question 11: Please comment on some of the negative aspects of Shared Web browsing tool.");
                     return false;
                 }
                 return true;

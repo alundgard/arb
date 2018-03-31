@@ -12,7 +12,8 @@ var surveySchema = mongoose.Schema({
     sa1: String,
     m1: String,
     m2: String,
-    m3: String
+    m3: String,
+    m4: String
     
 });
 
