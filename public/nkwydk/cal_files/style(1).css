@@ -1,0 +1,779 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+    cursor: pointer;
+    text-rendering: optimizeSpeed !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 600px;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-position: center;
+    border: 1px solid #000;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>Regional<<<<<<<<<<<<<<<<<<<<<<*/
+
+.carImg {
+    position: absolute;
+    width: 158px;
+    height: 598px;
+    background-size: 160px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    margin-top: -1px;
+    margin-left: 16px;
+    width: 49px;
+    height: 56px;
+    background: url(https://s0.2mdn.net/ads/richmedia/studio/34628934/9341_20141024101428423_tablet_160x600.jpg);
+    background-size: 49px 56px;
+    background-repeat: no-repeat;
+}
+
+.model {
+    position: absolute;
+    margin-left: 16px;
+    margin-right: 12px;
+    top: 425px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.750em;
+    color: #333333;
+    line-height: 1.150em;
+}
+
+.model .year {
+    color: #d60041;
+}
+
+.model .name sup {
+    margin-left: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7px;
+    line-height: 0;
+}
+
+.cta {
+    position: absolute;
+    width: 130px;
+    height: 28px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.cta:hover.cta:before {
+    -webkit-transform: translateX(130px);
+    -ms-transform: translateX(130px);
+    -o-transform: translateX(130px);
+    transform: translateX(130px);
+    -webkit-transition-property: -webkit-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 750ms;
+    -o-transition-duration: 750ms;
+    transition-duration: 750ms;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    -webkit-transform: translateX(-130px);
+    -ms-transform: translateX(-130px);
+    -o-transform: translateX(-130px);
+    transform: translateX(-130px);
+    width: 130px;
+    height: 28px;
+    background-image: url(https://s0.2mdn.net/ads/richmedia/studio/34888994/9341_20141117085257285_gradient.png);
+    background-size: 130px auto;
+    opacity: 0.7;
+}
+
+.cta:after{
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 28px;
+    background-color: rgba(0,0,0,0);
+}
+
+.cta.cta1 {
+    top: 473px;
+    background-color: #d60041;
+}
+
+.cta.cta2 {
+    bottom: 63px;
+    background-color: #808080;
+}
+
+.cta .ctaTxt {
+    position: absolute;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.800em;
+    text-align: center;
+    color: #ffffff;
+}
+
+.cta.cta1.salesEvent {
+    top : 473px;
+    background-color: rgba(0,0,0,0)!important;
+}
+
+.cta.cta2.salesEvent {
+    bottom: 63px;
+    background-color: rgba(0,0,0,0)!important;
+}
+
+
+.cta.salesEvent .ctaTxt {
+    display: none;
+}
+
+.disclaimerTxt {
+    position: absolute;
+    margin-left: 16px;
+    bottom: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 7px;
+    color: #d60041;
+    line-height: 1em;
+}
+
+.asShownDisclaimerTxt {
+    position: absolute;
+    margin-left: 16px;
+    margin-right: 16px;
+    top: 555px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7px;
+    color: #333333;
+    line-height: 1em;
+}
+
+.disclaimerBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 158px;
+    height: 598px;
+    background-color: rgb(0,0,0); /*rgba(255,255,255, 0.9)*/
+    display: none;
+}
+
+.disclaimerContent {
+    margin-top: 22px;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-top: 0;
+    padding-right: 7px;
+    padding-bottom: 10px;
+    padding-left: 7px;
+    height: 572px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    overflow-y: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.closeBtn {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 17px;
+    height: 17px;
+    background-image: url(https://s0.2mdn.net/ads/richmedia/studio/34629611/9341_20141024083343891_close_white.png);
+    background-size: 17px 17px;
+    background-repeat: no-repeat;
+}
+
+sup {
+    line-height: 0;
+    font-size: 7px;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>APR<<<<<<<<<<<<<<<<<<<<<<<<<*/
+.table{
+    display: table;
+}
+
+.td{
+    display: table-cell;
+}
+
+.tr{
+    display: table-row;
+}
+
+.apr .content,
+.aprcashback .content{
+    margin-top: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #d60041;
+}
+
+.aprcashback .content{
+    margin-top: 5px;
+}
+
+.apr .rate,
+.aprcashback .rate {
+    padding-left: 0px;
+    letter-spacing: -9px;
+    font-size: 5.450em;
+}
+
+.rateIsZero {
+    padding-left: 16px;
+    letter-spacing: -5px;
+    font-size: 5.450em;
+    background-color: black;
+}
+
+.apr .sup,
+.aprcashback .sup {
+    padding-top: 15px;
+    padding-left: 2px;
+    vertical-align: top;
+    font-size: 1.900em;
+}
+
+.apr .content+p,
+.aprcashback .content+p {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -9px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.050em;
+    color: #d60041;
+    line-height: 1em;
+}
+
+.apr .content+p > span,
+.aprcashback .content+p > span {
+    display: block;
+    font-size: 0.700em;
+    line-height: 1em;
+}
+
+.apr p+p,
+.aprcashback p+p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    /*font-weight: bold;*/
+    font-size: 0.500em;
+    color: #333333;
+    margin-top: 2px;
+}
+
+.aprcashback p+p{
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #333333;
+}
+
+.apr p+p sup {
+    font-size: 5px;
+}
+
+.aprcashback .copy sup {
+    position: absolute;
+    padding-top: 3px;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>CASHBACK<<<<<<<<<<<<<<<<<<<<<<*/
+.cashback p.amountUpto:before {
+    content: "Up To";
+    position: absolute;
+    margin-top: -12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.275em;
+    letter-spacing: normal;
+    color: #d60041;
+}
+.cashback p{
+    text-align: center;
+}
+
+.cashback p.amount,
+.cashback p.amountUpto{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.300em;
+    color: #d60041;
+    letter-spacing: -2.5px;
+}
+
+.cashback p sup{
+    font-size: 0.450em;
+}
+
+.cashback p.copy{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: .800em;
+    color: #333333;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>LEASE<<<<<<<<<<<<<<<<<<<<<<*/
+.lease p,
+.leasecash p {
+    text-align: center;
+}
+
+.lease p.amount,
+.leasecash p.amount {
+    margin-left: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 67px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.9em;
+    color: #d60041;
+    letter-spacing: -2.5px;
+}
+
+.lease p sup,
+.leasecash p sup {
+    font-size: 0.700em;
+    margin-right: 2px;
+}
+
+.lease p.amount+p,
+.leasecash p.amount+p {
+    margin-top: -5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: .750em;
+    letter-spacing: -0.5px;
+    color: #333333;
+}
+
+.lease p.copy,
+.leasecash p.copy {
+    margin-top: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7px;
+    text-align: center;
+    color: #333333;
+    line-height: 1.5;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>LEASECASH<<<<<<<<<<<<<<<<<<<<<<*/
+.leasecash p {
+    text-align: center;
+}
+
+.leasecash p.amount {
+    margin-top: 35px;
+}
+
+.leasecash p.copy {
+    border-bottom: 1px solid #333333;
+}
+
+.leasecash .cashback,
+.aprcashback .cashback {
+    position: absolute;
+}
+
+.leasecash .cashback div,
+.aprcashback .cashback div {
+    display: inline;
+}
+
+.leasecash .cashback div:first-child,
+.aprcashback .cashback div:first-child {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #d60041;
+    font-size: 8px;
+    line-height: 1.150em;
+}
+
+.aprcashback .cashback div:first-child span,
+.leasecash .cashback div:first-child span {
+    color: #333333;
+}
+
+.leasecash .cashback .amount,
+.aprcashback .cashback .amount {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    letter-spacing: -1px;
+    color: #333333;
+}
+
+.leasecash .cashback .amount sup {
+    font-size: 0.450em;
+}
+
+.aprcashback .cashback .amount sup {
+    font-size: 0.450em;
+}
+
+.leasecash .cashback .copy,
+.aprcashback .cashback .copy {
+    display: inline-block;
+    margin-left: 1px;
+    max-width: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    line-height: 1.200em;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>MSRP<<<<<<<<<<<<<<<<<<<<<<*/
+.msrp .copy {
+    margin-top: 75px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.950em;
+    color: #d60041;
+}
+
+.msrp .amount {
+    display: inline-block;
+    margin-top: -2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.300em;
+    letter-spacing: -1px;
+    color: #d60041;
+}
+
+.msrp .amount sup {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.475em;
+}
+
+.msrp .amount+div {
+    display: inline-block;
+    margin-top: -8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.050em;
+    color: #333333;
+}
+
+
+
+
+/*>>>>>>>>>>>>>>>>>>>>SNDL<<<<<<<<<<<<<<<<<<<<<<*/
+.leasesignndrive .table, 
+.leasesignndrivecashback .table {
+    margin-top: 13px;
+}
+
+.leasesignndrive .table sup, 
+.leasesignndrivecashback .table sup {
+    line-height: 0;
+}
+
+.leasesignndrive .table .amount, 
+.leasesignndrivecashback .table .amount {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.750em;
+    line-height: 0.875em;
+    color: #d60041;
+}
+
+.leasesignndrive .table .amount sup, 
+.leasesignndrivecashback .table .amount sup {
+    font-size: 0.500em;
+}
+
+.leasesignndrive .table .copy, 
+.leasesignndrivecashback .table .copy {
+    vertical-align: middle;
+    padding-left: 3px;
+    width: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.700em;
+    line-height: 1em;
+    color: #333333;
+}
+
+.leasesignndrive .table .copy sup, 
+.leasesignndrivecashback .table .copy sup {
+    margin-left: 2px;
+    font-size: 7px;
+}
+
+.leasesignndrive .table+p, 
+.leasesignndrivecashback .table+p {
+    margin-top: 5px;
+}
+
+.leasesignndrive p, 
+.leasesignndrivecashback p {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8.5px;
+    text-align: center;
+    color: #333333;
+}
+
+.leasesignndrivecashback .bonuscopy {
+    margin-left: 10px;
+    margin-right: 10px;
+	margin-bottom:5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    text-align: center;
+    color: #333333;
+}
+/*>>>>>>>>>>>>>>>>>>>>MATHSTACK<<<<<<<<<<<<<<<<<<<<<<*/
+.mathstack .content,
+.negmathstack .content {
+    margin-top: 25px;
+    color: #333333;
+}
+
+
+
+.mathstack .td.amount,
+.negmathstack .td.amount {
+    vertical-align: middle;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.750em;
+    letter-spacing: -1px;
+}
+
+.mathstack .td.amount sup,
+.negmathstack .td.amount sup {
+    line-height: 0;
+    font-size: 0.500em;
+}
+
+.mathstack .td.amount span,
+.negmathstack .td.amount span {
+    font-size: 0.500em;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.mathstack .td.copy,
+.negmathstack .td.copy {
+    padding-left: 3px;
+    width: 60px;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8px;
+}
+
+.mathstack .td.copy span,
+.negmathstack .td.copy span {
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    vertical-align: middle;
+    line-height: 1.250em;
+}
+
+.mathstack .td.copy span sup,
+.negmathstack .td.copy span sup {
+    line-height: 0;
+    font-size: 6px;
+}
+
+.mathstack .table,
+.negmathstack .table {
+   
+    border-bottom: 1px solid #000000;
+    
+
+
+}
+
+.mathstack .upto,
+.negmathstack .upto {
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #d60041;
+    font-size: 0.750em;
+}
+
+.mathstack .net,
+.negmathstack .net {
+    display: inline-block;
+    margin-top: -3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.500em;
+    color: #d60041;
+    letter-spacing: -2px;
+}
+
+.mathstack .net sup,
+.negmathstack .net sup {
+    font-size: 0.475em;
+}
+
+.mathstack .net+.copy,
+.negmathstack .net+.copy {
+    margin-top: -2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.700em;
+    text-align: center;
+    color: #333333;
+}
+
+.mathstack .td.amount .headCopy,
+.negmathstack .td.amount .headCopy {
+    position: absolute;
+    display: inline-block;
+    margin-top: -10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.275em;
+    letter-spacing: normal;
+    color: #d60041;
+}
+
+.mathstack .amountCond .headCopy {
+    position: absolute;
+    margin-top: -12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.275em;
+    letter-spacing: normal;
+    color: #d60041;
+}
+
+.negmathstack .amountCond .headCopy {
+    position: absolute;
+    margin-top: -12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.275em;
+    letter-spacing: normal;
+    color: #d60041;
+}
+
+.mathstack .amountCond,
+.negmathstack .amountCond {
+    display: inline-block;
+    margin-top: 75px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    letter-spacing: -1px;
+    color: #d60041;
+}
+
+.mathstack .amountCond sup,
+.negmathstack .amountCond sup {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.450em;
+}
+
+.mathstack p,
+.negmathstack p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.850em;
+    font-weight: normal;
+    text-align: center;
+}
+
+.negmathstack p{ color: #333; font-weight: bold!important;  margin-left: 15px;
+   font-size: 13px;}
+
+/*________________________________*/
+.videobox {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: 160px;
+    height: 600px;
+    background-color: #fff;
+}
+
+video {
+    position: absolute;
+    width: 160px;
+    height: 600px;
+    background-color: #000;
+}
+
+.videobox.fadeOut {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+.videobox:after {
+    content: "Fantasy. Simulated Image. Do not attempt. Cars canâ€™t snowboard";
+    position: absolute;
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-bottom: 25px;
+    bottom: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: bottom;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.750em;
+    font-weight: bolder;
+    line-height: 1em;
+    text-align: center;
+}
+
+.salesLogo {
+    position: absolute;
+    top: 15px;
+    left: 73px;
+    width: 84px;
+    height: 28px;
+    background-size: auto 28px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
